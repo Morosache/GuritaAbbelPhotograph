@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurita Abbel Fotograf</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mukta:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    
+
+
+</head> 
+   <body>
+     <header><!--bara navigare-->
+    
+       <div class="navbar">
+        <div> <img src="images/logo.png" id="logo" alt="Logo"></div>
+          <ul class="links">
+            <li><a href="index.html">Acasa</a></li>
+            <li><a href="despremine.html">Despre mine</a></li>
+            <li><a href="#">Nunti</a></li>
+            <li><a href="#">Sedinte foto</a></li>
+            <li><a href="#">Preturi</a></li>
+          </ul>
+         <a href="#" class="action_btn" >Contact</a> 
+         <div class="toggle_btn">
+          <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+         </div>
+        </div>   
+        
+        <div class="dropdown_menu">
+           <li><a href="#">Acasa</a></li>
+            <li><a href="despremine.html">Despre mine</a></li>
+            <li><a href="#">Nunti</a></li>
+            <li><a href="#">Sedinte foto</a></li>
+            <li><a href="#">Preturi</a></li>
+            <li><a href="#" class="action_btn" >Contact</a> </li>
+        </div>
+        </header>
+
+
+        
+<!-- despre mine paragraf -->
+        <div class="despremine_p">
+          <div class="paragraf_titlu">
+            <div class="titlu_descriere">
+              <h1>Putin despre mine</h1>
+            </div>
+            <div class="descriere_Eu">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper, eros ac dignissim fringilla, ex libero laoreet ex, consequat pharetra tortor turpis ut risus. Vestibulum vehicula nulla quis faucibus rutrum.</p>
+                
+                <p>Duis rutrum lacus eu nunc accumsan congue eget non lacus. Vivamus eget sagittis purus. Nam iaculis, est at interdum euismod, nisi justo gravida tortor, accumsan efficitur erat turpis ut lectus. Integer id consequat nibh, nec interdum nibh. Aenean vel convallis justo. Integer neque metus, feugiat a nisi accumsan, dapibus consequat tellus. Nulla nibh ante, aliquam sit amet ipsum interdum, varius rhoncus urna. </p>
+            </div>
+            <div class="butondespremine">
+              <a href="#" class="despremine_btn"> Mai multe despre mine</a>
+            </div>
+          </div>
+          <div class="poza_Eu">
+            <img src="images/pozaabbel.png" class="poza_Eu" alt="Poza cu mine">
+          </div>
+          
+        </div>
+
+
+        <!--  poze pagina principala -->
+        <div class="prezentare_poze">
+          <div class="poze1">
+            <img src="images/show1 (1).jpg" id="poza1" alt="">
+            <img src="images/show1 (2).jpg" id="poza1" alt="">
+            <img src="images/show1 (3).jpg" id="poza1" alt="">
+            <img src="images/show1 (4).jpg" id="poza1" alt="">
+            <img src="images/show1 (5).jpg" id="poza1" alt="">
+            <img src="images/show1 (6).jpg" id="poza1" alt="">
+            <img src="images/show1 (7).jpg" id="poza1" alt="">
+            <img src="images/show1 (8).jpg" id="poza1" alt="">
+            <img src="images/show1 (9).jpg" id="poza1" alt="">
+            <div class="butondespremine">
+              <a href="#" class="poze_btn"> Mai multe poze</a>
+            </div>
+          </div>
+        </div>
+
+        
+        
+        <!-- script dropdown -->
+        <script>
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+
+          toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+            
+          }
+        </script>       
+      
+  </body>
+</html>

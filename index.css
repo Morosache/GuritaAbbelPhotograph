@@ -1,0 +1,584 @@
+body{
+    margin:0;
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:aliceblue;
+}
+
+a:hover{
+    color:rgb(221, 184, 131);
+}
+
+
+
+
+
+/* Header */
+/* */
+/* */
+header{
+    position: relative;
+    background-image: url(images/pozanav.png) ;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    
+}
+/* Logo navbar */
+#logo{
+    height: 80px;
+    width:80px;
+    margin-left:80px;
+}
+
+
+/* navbar itself */
+.navbar{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  rgba(245, 233, 211, 0.116);
+}
+
+.navbar .links{
+    display:flex;
+    gap:6rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+}
+
+.navbar .toggle_btn{
+    color:azure;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+
+}
+
+.action_btn{
+    background-color: rgb(224, 202, 159) ;
+    color:aliceblue;
+    padding:0.5rem 1rem;
+    border:none;
+    outline:none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right:50px;
+
+}
+
+.action_btn:hover {
+    color: rgb(248, 234, 206);
+    scale:1.20;
+}
+
+.action_btn:active{
+    scale:0.95;
+ }
+
+/* dropdown menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right:1.5rem;
+    top:60px;
+    width:330px;
+    height: 0;
+    background: rgba(231, 222, 198, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius:10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.dropdown_menu.open{
+    height: 270px;
+}
+
+.dropdown_menu li{
+    padding:0.7rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.dropdown_menu .action_btn{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin-left: 50px;
+    
+}
+
+
+
+
+
+/* Putin despre mine */
+.despremine_p{
+    display: flex;
+    justify-content: center;
+    align-items:space-evenly;
+    margin: 125px 200px 0px 200px;
+    
+
+}
+
+.paragraf_titlu{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    margin-top:50px;
+}
+
+.descriere_Eu{
+    font-size:1.20rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    
+
+}
+
+.titlu_descriere{
+    font-size:1.20rem;
+    border-bottom-style:solid;
+    border-width: 1px;
+    
+}
+
+
+
+.poza_Eu{
+    width: 400px;
+    height:550px;
+    margin-left:20px;
+}
+
+.butondespremine{
+    margin-top:20px;
+}
+
+.despremine_btn{
+    background-color: #FAB381;    
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.despremine_btn:hover{
+    color:black;
+}
+
+
+
+
+/* PREZENTARE POZE */
+.prezentare_poze{
+    display:flex;
+    justify-content: space-between;
+    margin: 200px 170px 0px 200px;
+    line-gap-override: 1rem;
+
+}
+
+#poza1{
+    width: 500px;
+    padding:0.5rem;
+
+}
+
+.poze_btn{
+    background-color: #FAB381;    
+    border-radius: 100px;
+    padding: 20px 20px 20px 20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.poze_btn:hover{
+    color:black;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+
+
+@media(max-width:1925px){
+    #poza1{
+       width:450px;
+    }
+}
+
+
+
+
+@media(max-width:1800px){
+    #poza1{
+        width:400px;}
+    }
+
+
+
+
+ @media(max-width:1620px){
+        #poza1{
+            width:350px;}
+        }
+
+
+
+
+     @media(max-width:1480px){
+            #poza1{
+                width:300px;}
+
+                .poze_btn{
+                    padding:15px 15px 15px 15px;
+                }
+            }
+
+@media(max-width:1330px){
+
+    /* Descriere */
+    .descriere_Eu{
+        font-size:1.10rem;
+    }
+
+
+    /* PREZENTARE POZE */
+    #poza1{
+        width: 375px;
+    }
+
+    .prezentare_poze{
+        margin-left:250px;
+    }
+
+    
+}
+@media(max-width:1204px){
+
+    /* navbar */
+    .navbar .links{
+        gap:3.5rem;
+    }
+    
+
+
+    /* Descriere */
+
+    .poza_Eu{
+        width:300px;
+        height:400px;
+    }
+    
+
+    .despremine_p{
+        margin: 125px 100px 0px 100px;
+    }
+
+    .descriere_Eu{
+        font-size: 1rem;
+    }
+
+    .titlu_descriere{
+        font-size:1.20rem
+        
+    }
+
+    .paragraf_titlu{
+        margin-top:5px;
+    }
+
+
+    /* PREZENTARE POZE */
+    #poza1{
+        width:500px;
+    }
+
+    .prezentare_poze{
+        margin-left:300px;
+    }
+}
+
+
+@media(max-width:1092px){
+    .prezentare_poze{
+        margin-right:300px;
+    }
+}
+
+
+/* 992PX */
+
+@media(max-width:992px){
+
+    /* NAVBAR */
+     .navbar .links,
+    .navbar .action_btn{
+        display:none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+
+        margin-right: 85px;
+    }
+
+    .fa-solid_fa-bars{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .dropdown_menu{
+        display:block;
+        top:84px;
+        margin-right:0;
+        border-radius: 10;
+    }
+
+
+    /*  DESCRIERE */
+   
+    .despremine_p{
+        flex-wrap: wrap-reverse;
+        width:80vw;
+        justify-content: center;
+        align-items: center;
+        margin:75px;
+       
+    
+    }
+
+    .poza_Eu{
+       width:400px;
+       height:500px;
+        margin:0;
+    }
+
+    .titlu_descriere{
+        font-size:0.80rem;
+    }
+
+    /* Prezerntare Poze */
+
+    .prezentare_poze{
+        margin-right:250px;
+        margin-left:200px;
+        margin-top:150px;
+    }
+}
+
+
+
+@media(max-width:892px){
+    .prezentare_poze{
+        margin-left:175px;
+        margin-top:125px;
+    
+}
+}
+
+@media(max-width:792px){
+    .prezentare_poze{
+        margin-left:150px;
+    
+}
+}
+/* 750PX */
+
+@media(max-width:750px){
+
+    /* Descriere */
+    .despremine_p{
+        margin-left:60px;
+        margin-right:60px;
+    }
+    .poza_Eu{
+        width:325px;
+        height:425px;
+    }
+
+    .titlu_descriere{
+        font-size: 0.70rem;
+    }
+
+    .prezentare_poze{
+        margin-left:150px;
+        margin-right:150px;
+    }
+
+    #poza1{
+        width:450px;
+    }
+
+
+}
+
+
+
+@media(max-width:670px){
+    .prezentare_poze{
+        margin-left:90px;
+        margin-top: 100px;
+    
+}
+}
+
+
+@media(max-width:600px){
+    .prezentare_poze{
+        margin-left:55px;
+    }
+
+    poze_btn{
+        padding:7px 7px 7px 7px;
+    }
+}   
+
+
+@media(max-width:550px){
+    .prezentare_poze{
+        margin-left:65px;
+    }
+
+    #poza1{
+        width:400px;
+    }
+}   
+
+@media(max-width:525px){
+    .prezentare_poze{
+        margin-left:50px;
+    }
+}   
+
+@media(max-width:490px){
+    .prezentare_poze{
+        margin-left:60px;
+    }
+
+    #poza1{
+        width:350px;
+    }
+}   
+
+
+@media(max-width:450px){
+    .prezentare_poze{
+        margin-left: 65px;
+    }
+
+    #poza1{
+        width:300px;
+    }
+}   
+
+
+
+/* 425PX */
+@media(max-width:425px){
+
+    /* Navbar */
+    .dropdown_menu{
+        width:350px;
+        right:10;
+
+    }
+
+
+    /* Descriere */
+    .despremine_p{
+        font-size: 0.75rem;
+        margin-top: 120px;
+        margin-left:45px;
+    }
+
+    .titlu_descriere{
+        font-size:0.70rem;
+
+    }
+
+    .prezentare_poze{
+        margin-left:52px;
+    }
+}
+
+
+@media(max-width:400px){
+    .prezentare_poze{
+        margin-left:42px;
+    }
+}
+
+
+/* 375PX */
+@media(max-width:375px){
+    /* NAVBAR */
+    .dropdown_menu{
+        width:300px;
+        right:10;
+
+    }
+
+
+    /* DESCRIERE */
+    .despremine_p{
+        margin-top:125px;
+        margin-left:30px;
+        font-size: 0.50rem;
+
+    }
+
+    .poza_Eu{
+        width:275px;
+        height:375px;
+    }
+
+    .despremine_btn{
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+
+    .prezentare_poze{
+        margin-left:50px;
+        margin-top:75px;
+
+        
+    }
+
+    #poza1{
+        width:250px;
+    }
+}
+
+
+@media(max-width:340px){
+    .prezentare_poze{
+        margin-left:40px;
+    }
+}
+
+
+
+
+
+
